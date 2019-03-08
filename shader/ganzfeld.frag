@@ -5,10 +5,12 @@
 precision mediump float;
 #endif
 
+#define PI 3.14159265359
+
 uniform float u_time;
 
 float pulse(float x, float period) {
-    return 0.5*sin(x/period) + 0.5;
+    return 0.5*sin(PI*x/period) + 0.5;
 }
 
 vec3 correct_gamma(vec3 color) {
