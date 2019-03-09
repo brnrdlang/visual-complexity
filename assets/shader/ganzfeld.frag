@@ -1,9 +1,3 @@
----
-title: Pulsed Ganzfeld
-author: Bernhard Lang
-file: ganzfeld.frag
----
-```GLSL
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -27,4 +21,3 @@ vec3 Ganzfeld() {
 void main() {
     gl_FragColor = vec4(correct_gamma(Ganzfeld()), 1.0);
 }
-```
