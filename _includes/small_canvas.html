@@ -1,2 +1,2 @@
-{% assign sh = site.shader | where:"title", include.shader-title  | first %}
+{% assign sh = site.shader | where:"title", include.shaderid  | first %}
 <canvas class="glslCanvas" data-fragment="{{ sh.content }}"></canvas>
