@@ -3,6 +3,7 @@ title: Edge
 author: Bernhard Lang
 tags:
 ---
+{% raw %}
 #ifdef GL_ES
 precision mediump float;
 #endif
@@ -14,3 +15,4 @@ void main() {
 
     gl_FragColor = vec4(vec3(step(0.5, x)), 1.0);
 }
+{% endraw %}
