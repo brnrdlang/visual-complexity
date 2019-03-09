@@ -1,1 +1,2 @@
-<canvas class="glslCanvas" data-fragment-url="https://brnrdlang.github.io/visual-complexity/shader/{{ include.shader }}" width="500" height="500"></canvas>
+{% assign sh = site.shader | where:"title", include.shader-title  | first %}
+<canvas class="glslCanvas" data-fragment="{{ sh.content }}"></canvas>

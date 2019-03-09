@@ -1,6 +1,8 @@
-// Author: Bernhard Lang
-// Title: Edge
-
+---
+title: Edge
+author: Bernhard Lang
+tags:
+---
 #ifdef GL_ES
 precision mediump float;
 #endif

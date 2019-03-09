@@ -1,6 +1,8 @@
-// Author: Bernhard Lang
-// Title: Pulsed Ganzfeld
-
+---
+title: Pulsed Ganzfeld
+author: Bernhard Lang
+tags:
+---
 #ifdef GL_ES
 precision mediump float;
 #endif
