@@ -16,8 +16,8 @@ float pulse(float x, float period) {
     return 0.5*sin(PI*x/period) + 0.5;
 }
 
-vec3 correct_gamma(vec3 color) {
-    return pow(color, vec3(1.0/2.2));
+vec3 sRGB(vec3 cl) {
+   return step(cl, vec3(0.04045)) * cl / 12.92 + (1.0 - step(cl, vec3(0.04045))) * pow(cl + 0.055, vec3( 2.4) );
 }
 
 vec3 Ganzfeld() {
@@ -25,6 +25,6 @@ vec3 Ganzfeld() {
 }
 
 void main() {
-    gl_FragColor = vec4(correct_gamma(Ganzfeld()), 1.0);
+    gl_FragColor = vec4(sRGB(Ganzfeld()), 1.0);
 }
 ```
