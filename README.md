@@ -2,6 +2,6 @@
 
 A study on a hierarchy of growing visual complexity, written in GLSL fragment shaders.
 
-{% for post in site.posts %}
+{% for post in site.posts reversed %}
 {% include small_canvas.html file=post.file %}
 {% endfor %}
