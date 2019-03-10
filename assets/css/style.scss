@@ -10,13 +10,20 @@
   float: left;
 }
 
-.glslCanvas {
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 90%;
-    border-style: solid;
-    border-width: 1px;
-    cursor: pointer;
+.gallery .glslCanvas {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+
+#bg-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
