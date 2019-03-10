@@ -10,7 +10,8 @@ vec3 square(vec2 xy, vec2 pos, vec2 size, vec3 col, vec3 bg) {
 }
 
 vec3 edge(vec2 pos, vec3 cl_left, vec3 cl_right) {
-    return (cl_right - cl_left)*step(-0.3*pos.y+0.65, pos.x) + cl_left;
+    float ed = -0.3*pos.y+0.65;
+    return (cl_right - cl_left)*step(ed - 1.0/u_resolution.x, ed + 1.0/u_resolution.x, pos.x) + cl_left;
 }
 
 vec3 invSRGB(vec3 cl) {
