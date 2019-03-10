@@ -16,6 +16,6 @@ void main() {
     float duration = 5.0;
     float s = square(u_time, duration) * fract(-u_time/duration)+0.01;
     float func = 0.3*y+0.35;
-    float line = 1.0 - step(func, x+s) + step(func, x-s);
+    float line = 1.0 - smoothstep(func - 1.0/u_resolution.x, func + 1.0/u_resolution.x, x+s) + smoothstep(func - 1.0/u_resolution.x, func + 1.0/u_resolution.x, x-s);
     gl_FragColor = vec4(vec3(line), 1.0);
 }
