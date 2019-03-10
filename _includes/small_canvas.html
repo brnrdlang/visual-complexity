@@ -1,4 +1,4 @@
 <div class="gallery">
 {% assign post = site.posts | where:"file", include.file  | first %}
-<canvas class="glslCanvas" onclick="location.href='{{ post.url }}';" data-fragment-url="https://brnrdlang.github.io/visual-complexity/assets/shader/{{ include.file }}"></canvas>
+<canvas class="glslCanvas" onclick="location.href='{{ site.baseurl }}{{ post.url }}';" data-fragment-url="https://brnrdlang.github.io/visual-complexity/assets/shader/{{ include.file }}"></canvas>
 </div>

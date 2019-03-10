@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
 collections:
   - shader
-permalink: /visual-complexity/:categories/:title/
+baseurl: /visual-complexity
+permalink: /:categories/:title/
