@@ -13,7 +13,7 @@ A fragment shader is essentially a function that takes a position as input and r
 2. [Edge]({{ site.baseurl }}/02/edge/)
 3. [Line]({{ site.baseurl }}/03/line/)
 4. [Closed shape]({{ site.baseurl }}/04/shape/)
-5. [Point]({{ site.baseurl }}/05/point/)
+5. [Point]({{ site.baseurl }}/05/points/)
 
 {% for post in site.posts reversed %}
 {% include gallery_canvas.html file=post.file %}
