@@ -1,5 +1,7 @@
 theme: jekyll-theme-minimal
 collections:
-  - shader
+  shader:
+    output: true
+    layout: shader
 baseurl: /visual-complexity
 permalink: /:categories/:title/
