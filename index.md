@@ -7,7 +7,5 @@ A study on a hierarchy of growing visual complexity, written in GLSL fragment sh
 {% endfor %}
 
 {% for shader in site.shader %}
-
-[shader.title]({{ baseurl }}{{ shader.url }})
-
+[shader.title]({{ site.baseurl }}{{ shader.url }})
 {% endfor %}
