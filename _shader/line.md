@@ -1,5 +1,5 @@
 ---
-title: Edge
+title: Emerging line
 author: Bernhard Lang
 file: line.frag
 ---
