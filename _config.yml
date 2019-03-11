@@ -2,6 +2,13 @@ theme: jekyll-theme-minimal
 collections:
   shader:
     output: true
-    layout: shader
+
 baseurl: /visual-complexity
 permalink: /:categories/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "shader"
+    values:
+      layout: "shader"
