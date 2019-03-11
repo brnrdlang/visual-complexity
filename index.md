@@ -1,4 +1,4 @@
-# visual-complexity
+# Visual complexity
 
 This site is an attempt at establishing a hierarchy of visual elements with growing visual complexity.
 This endavour could be tackled from various different angles.
@@ -15,6 +15,7 @@ A fragment shader is essentially a function that takes a position as input and r
 4. [Closed shape]({{ site.baseurl }}/04/shape/)
 5. [Point]({{ site.baseurl }}/05/points/)
 
+## Gallery
 {% for post in site.posts reversed %}
 {% include gallery_canvas.html file=post.file %}
 {% endfor %}
