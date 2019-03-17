@@ -29,6 +29,6 @@ A fragment shader is essentially a function that takes a position as input and r
 11. [Illumination]({{ site.baseurl }}/11/illumination/)
 
 # Gallery
-{% for post in site.posts reversed %}
-{% include gallery_canvas.html file=post.file %}
+{% for shader in site.shader %}
+{% include gallery_canvas.html shader=shader %}
 {% endfor %}
