@@ -1,0 +1,26 @@
+---
+title: Edge
+author: Bernhard Lang
+file: gradient-to-edge.frag
+---
+```
+#define PI 3.14159265359
+
+uniform vec2 u_resolution;
+uniform float u_time;
+
+const float amp = 0.5;
+const float duration = 20.0;
+
+void main() {
+    float x = gl_FragCoord.x/u_resolution.x;
+    float y = gl_FragCoord.y/u_resolution.y;
+    
+    float width = amp * sin(2.0*PI*u_time/duration) + amp;
+    float edge = smoothstep(0.5 - width - 1.0/u_resolution.x,
+                            0.5 + width + 1.0/u_resolution.x,
+                            x);
+    
+    gl_FragColor = vec4(vec3(edge), 1.0);
+}
+```
