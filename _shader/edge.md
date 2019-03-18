@@ -18,7 +18,7 @@ void main() {
     float px = 1.0/u_resolution.x;
     
     float f = 0.150*sin(2.0*PI*y)+0.5;
-    float edge = smoothstep(edge-px, edge+px, x);
+    float edge = smoothstep(f-px, f+px, x);
     gl_FragColor = vec4(vec3(edge), 1.0);
 }
 ```
