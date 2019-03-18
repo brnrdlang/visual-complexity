@@ -5,17 +5,16 @@ precision mediump float;
 uniform vec2 u_resolution;
 uniform float u_time;
 
-float square(float x, float w) {
-	return step(0.5, fract(x/w));
+float triangle(float x, float pulse_width) {
+    return step(0.5, fract(x/pulse_width)) + (-2.0*step(0.5, fract(x/pulse_width))+1.0) * fract(2.0*x/pulse_width);
 }
 
 void main() {
-    float x = fract(3.0*gl_FragCoord.x/u_resolution.x);
-    float y = fract(3.0*gl_FragCoord.y/u_resolution.y);
+    float x = 2.0*gl_FragCoord.x/u_resolution.x-1.0;
+    float y = 2.0*gl_FragCoord.y/u_resolution.y-1.0;
     
-    float duration = 2.0;
-    float s = 0.45 * square(u_time, 2.0*duration) * fract(-u_time/duration)+ 0.05;
-	float t = 0.45 * ( square(u_time, 2.0 * duration)) * fract(-u_time/duration) + 0.05;
-    float line = step(0.5, x+s) * (1.0 - step(0.5, x-s)) * step(0.5, y+t) * (1.0 - step(0.5, y-t));
-    gl_FragColor = vec4(vec3(line), 1.0);
+    float duration = 10.0;
+    float radius = sqrt(sqrt(x*x+y*y))/2.0;
+    float circle = step(0.5, fract(radius+u_time/duration));
+    gl_FragColor = vec4(vec3(circle), 1.0);
 }
