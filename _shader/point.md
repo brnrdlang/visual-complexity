@@ -8,7 +8,9 @@ uniform vec2 u_resolution;
 uniform float u_time;
 
 float triangle(float x, float pulse_width) {
-    return step(0.5, fract(x/pulse_width)) + (-2.0*step(0.5, fract(x/pulse_width))+1.0) * fract(2.0*x/pulse_width);
+    return step(0.5, fract(x/pulse_width)) 
+           + (-2.0*step(0.5, fract(x/pulse_width))+1.0)
+           * fract(2.0*x/pulse_width);
 }
 
 void main() {
