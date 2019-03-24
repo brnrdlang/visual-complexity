@@ -11,7 +11,10 @@ void main() {
     vec2 pos = gl_FragCoord.xy/u_resolution.xy;
     vec2 mouse = u_mouse.xy/u_resolution.xy;
     
-    float edge = -pos.y + 4.0*fract(mouse.x/2.0);
+    float edge = -pos.y +
+                  fract(mouse.x) +
+                  fract(mouse.y);
+                  
     float ed1 = pos.y+0.25;
     float ed2 = pos.y-0.25;
     float col = 1.0 - 
