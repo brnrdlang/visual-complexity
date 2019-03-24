@@ -13,7 +13,9 @@ float pulse(float x, float period) {
 }
 
 vec3 Ganzfeld() {
-    return vec3(pulse(u_time, 53.0), pulse(u_time, 101.0) + 0.5, pulse(u_time, 151.0));
+    return vec3(pulse(u_time, 53.0),
+                pulse(u_time, 101.0),
+                pulse(u_time, 151.0));
 }
 
 void main() {
