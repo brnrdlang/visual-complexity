@@ -24,8 +24,16 @@ void main() {
     
     float grey = triangle(15.0);
 
-    vec3 left = square(pos, vec2(5.0/18.0, .25), vec2(1.0/18.0, .5), vec3(grey), vec3(1.0));
-    vec3 right = square(pos, vec2(12.0/18.0, .25), vec2(1.0/18.0, .5), vec3(grey), vec3(0.0));
-    float wv = step(0.5, fract(9.*pos.x));
-    gl_FragColor = vec4(vec3(wv) + left + right, 1.0);
+    vec3 left = square(pos,
+                       vec2(4.5/18.0, 5.0/18.0),
+                       vec2(3.0/18.0, 10.0/18.0),
+                       vec3(grey),
+                       vec3(1.0));
+    vec3 right = square(pos,
+                        vec2(10.5/18.0, 4.0/18.0),
+                        vec2(3.0/18.0, 10.0/18.0),
+                        vec3(grey),
+                        vec3(0.0));
+    float grating = step(0.5, fract(9.*pos.y));
+    gl_FragColor = vec4(vec3(grating) + left + right, 1.0);
 }
