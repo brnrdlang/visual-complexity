@@ -28,7 +28,7 @@ float triangle(float pulse_width) {
 void main() {
     vec2 pos = gl_FragCoord.xy/u_resolution.xy;
     
-    float grey = triangle(5.0);
+    float grey = triangle(15.0);
 
     vec3 left = square(pos, vec2(5.0/18.0, .25), vec2(1.0/18.0, .5), vec3(grey), vec3(1.0));
     vec3 right = square(pos, vec2(12.0/18.0, .25), vec2(1.0/18.0, .5), vec3(grey), vec3(0.0));
