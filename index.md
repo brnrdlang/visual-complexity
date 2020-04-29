@@ -1,13 +1,3 @@
-# Visual complexity
-
-This site is an attempt at establishing a hierarchy of visual elements with growing visual complexity.
-This endavour could be tackled from various different angles.
-* We could try to estimate the complexity of the physical stimulus display
-* We could try to order displays by their perceptual simplicity
-
-I will start out with a physical description of each stimulus in the OpenGL shader language, but I will also try to demonstrate the perceptual relevance of each element.
-A fragment shader is essentially a function that takes a position as input and returns a light mixture in the form of a RGB triplet for this position (it also returns a fourth component called an alpha value that we will mostly ignore).
-
 ## Two-dimensional visual displays
 0. [Uniform area]({{ site.baseurl }}/00/uniform/)
 1. [Smooth gradient]({{ site.baseurl }}/01/gradient/)
